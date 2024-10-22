@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // Json객체 속성+기능
+         // Json객체 읽기 수정 삭제 중요
+         // 객체는 한쌍으로 되어있다 key : value, key:value... key는 중복 불가능, 객체는 함수로도 올수있다
+         let dog = {
+            name: '흰둥이',
+            owner: '신짱구',
+            age: 1,
+            family: ['신짱구', '신짱아', '봉미선', '신형만'],
+            walk: function () {
+               console.log(this.name + '는 산책중 입니다')
+            },
+            // walk: () => {
+            //    console.log(this.name + '는 산책중 입니다')
+            // }, //화살표 함수로 써도된다? 화살표 함수는 this가 안먹힘 function 사용
+         }
+
+         console.log(dog.name)
+         console.log(dog.family)
+         console.log(dog['family'])
+         dog.walk()
+         console.log('')
+
+         // 객체 수정
+         dog.name = '검둥이'
+         console.log(dog.name)
+         dog.family[0] = '짱구'
+         console.log(dog.family[0])
+         dog.date = '24/10/22' // 추가
+         console.log(dog.date)
+         dog.walk = function () {
+            console.log(this.name + '는 노는 중입니다')
+         }
+         dog.walk()
+         console.log('')
+
+         // 객체 삭제
+         delete dog.age //age속성 삭제
+         console.log(dog.age)
+         delete dog.family[0]
+         console.log(dog.family)
+         dog.family[0] = '짱구구'
+         console.log(dog.family)
+
+         // Json 객체 함수
+
+         // Nember, Math, String  넘버 스트링이 많이 쓰임
+      </script>
+   </body>
+</html>

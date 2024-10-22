@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var test //undefined
+         var num1 = null
+         var str = ''
+         //  undefined, null, '', 0 제외 전부 true
+         if (!test) {
+            console.log('false입니다')
+         }
+
+         if (!str) {
+            console.log('빈문자열입니다')
+         }
+
+         // const, let, var 차이점
+         var value1 = 0
+         var value1 = 1
+         value1 = 2
+
+         // let 똑같은 변수로 다시 정의 불가능, 수정 가능
+         let value2 = 0
+         //  let value2 = 1
+         vlaue2 = 2
+
+         // const 같은 변수로 정의 불가능, 수정 불가능
+         const value3 = 1
+         // const value3 = 2
+         // value3 = 3
+      </script>
+   </body>
+</html>
