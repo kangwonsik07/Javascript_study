@@ -22,7 +22,7 @@ const getpopularTV = async (url) => {
       let rowshtml = ''
 
       for (let i = 0; i < results.length; i += 2) {
-         let rowhtml = '<div class="row" >'
+         let rowhtml = '<div class="rows p-3"" >'
 
          for (let j = 0; j < 2; j++) {
             const index = i + j
@@ -30,19 +30,19 @@ const getpopularTV = async (url) => {
 
             const popularTV = results[index]
             rowhtml += `
-            <div class="col-sm-3 p-3">
-               <div class="card" >
+            <div class="col-sm-6 p-3 cardddd ">
+               <div >
                     <a href="./popularTVdetail.html?popularTV_id=${popularTV.id}">
                         <img src="https://image.tmdb.org/t/p/w500${popularTV.poster_path}" alt="poster" class="poster-detail card-img-left poster" style='max-width:100%'/>
                     </a>
+               </div>
+               <div class="col-sm-6 p-3" >
                      <ul class="TV-info">
-                        <li><p>${popularTV.name}</p></li>
-                        <li><p>${popularTV.vote_average}</p></li>
-                        <li><p>${popularTV.overview}</p></li>
+                        <li>${popularTV.name}</li>
+                        <li>${popularTV.vote_average}<li>
+                        <li class="details">${popularTV.overview}</li>
                      </ul>
-                     
-                </div>
-                
+               </div>
             </div>
                `
          }

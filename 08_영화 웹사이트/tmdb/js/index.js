@@ -35,7 +35,7 @@ const getPlayingMovies = async (url) => {
 
       for (let i = 0; i < results.length; i += 4) {
          // 5번 반복 -> row를 5개 만들어준다
-         let rowhtml = '<div class="row">'
+         let rowhtml = '<div class="rows">'
 
          for (let j = 0; j < 4; j++) {
             // 4번 반복 -> col을 4개 만들어준다
@@ -45,7 +45,7 @@ const getPlayingMovies = async (url) => {
             const movie = results[index]
             rowhtml += `
             <div class="col-sm-3 p-3">
-                <div class="card">
+                <div class="card" >
                      <a href="./detail.html?movie_id=${movie.id}">
                         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top poster" alt="${movie.title}" />
                     </a>
